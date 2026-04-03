@@ -1,0 +1,17 @@
+@* Reusable upload component keeps upload UX and validation rules consistent across all tools. *@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">Upload Files</h5>
+        <p class="text-muted">Drag and drop PDF/JPG/PNG files or click below.</p>
+
+        <form method="post" asp-controller="Dashboard" asp-action="UploadFiles" enctype="multipart/form-data" id="uploadForm">
+            @Html.AntiForgeryToken()
+            <div id="dropZone" class="drop-zone mb-3">
+                <input type="file" name="Files" id="fileInput" class="form-control" multiple accept=".pdf,.jpg,.png" />
+                <span>Drop files here</span>
+            </div>
+            <div id="uploadValidationMessage" class="text-danger small mb-2"></div>
+            <button type="submit" class="btn btn-success">Upload</button>
+        </form>
+    </div>
+</div>

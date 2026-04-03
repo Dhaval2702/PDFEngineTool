@@ -1,0 +1,38 @@
+body {
+    background: #f8fafc;
+}
+
+.tool-card {
+    border: none;
+    border-radius: 1rem;
+}
+
+.icon-pill {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e9f1ff;
+    color: #185adb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.drop-zone {
+    position: relative;
+    border: 2px dashed #8da2fb;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    background: #f8f9ff;
+}
+
+.drop-zone.drag-over {
+    border-color: #0d6efd;
+    background: #eef4ff;
+}
+
+.drop-zone input[type="file"] {
+    margin-bottom: 1rem;
+}
